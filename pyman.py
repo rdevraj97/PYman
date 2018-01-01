@@ -43,7 +43,7 @@ random_index = random.randint(0, 51)
 
 animal_word = animals_lst[random_index]
 # a random word is selected each time the game is run from the animals_lst list
-print(animal_word)
+
 
 length = len(animal_word) 
 print(length)
@@ -51,10 +51,11 @@ print(length)
 
 fails = length * 2 # Number of attempts to guess the word
 
-print("The word you are to guess is", length, "letters long.")
-print("You have", fails, "guesses to guess the word") 
+print("The animal you are to guess is", length, "letters long.")
+print("You have", fails, "guesses to guess the animal") 
         
 all_guesses = '' # will include the letters guessed
+
 
 while (fails > 0):
     wrong_count = 0 # keeps track of the number of incorrect guesses
@@ -77,13 +78,13 @@ while (fails > 0):
     if guess not in animal_word:
         print("The letter: " + guess + " is not in the word")
         fails = fails - 1
-        print("You have",fails,"turns left to guess the word!")
+        print("You have",fails,"turns left to guess the animal!")
 
 if (fails == 0):
-    print("You have not guessed the word, the word was " + animal_word + \
+    print("You have not guessed the animal, the animal was " + animal_word + \
           ". Try another word!") #Losing case
 else:
-    print ("Congrats! You have successfully guessed the word!") #Winning case
+    print ("Congrats! You have successfully guessed the animal: " + animal_word + "!") #Winning case
 
         
         
